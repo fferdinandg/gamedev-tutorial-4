@@ -315,15 +315,15 @@ position = Vector2( 1144, -206 )
 script = ExtResource( 7 )
 obstacle = ExtResource( 6 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="WinArea2" type="Area2D" parent="."]
 position = Vector2( 1597, 88 )
 scale = Vector2( 200, 222 )
 script = ExtResource( 4 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinArea2"]
 position = Vector2( 2.555, -5.5991 )
 scale = Vector2( 10, 10 )
 shape = SubResource( 31 )
 
 [connection signal="body_entered" from="LoseArea" to="LoseArea" method="_on_LoseArea_body_entered"]
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="WinArea2" to="WinArea2" method="_on_Area2D_body_entered"]
